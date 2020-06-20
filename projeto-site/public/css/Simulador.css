@@ -1,0 +1,283 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: sans-serif;
+}
+/* inicio do header */
+header{
+    background-color:	#E6E6FA;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+  /* ele define que os elementos não fique encima da barra de menu */ 
+   z-index: 100;
+}
+
+.box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* define o espaço entre os itens*/
+}
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+nav{
+    margin: 30px 0;
+}
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    height: 50px;
+    color: black;
+}
+nav a:hover{
+    color: #7B68EE;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.imagemenu{
+height: 70px;
+float: left;
+
+}
+/* final do header */
+
+.pai {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/fundo.JPEG');
+    background-size: 103%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+/* inicio do titulo */
+.titulo{
+    width: 80%;
+    height: 15%;
+    border-bottom-color: green;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    /* margin-top: 10%; */
+    margin-top: 7%;
+    padding-bottom: 6px;
+}
+.titulo h2{
+    font-size: 240%;
+    padding: 3%;
+    width: 75%;
+    margin-left: 1%;
+
+}
+.titulo .logo{
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/logo2.png);
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 2px; 
+}
+/* final do titulo */
+/* inicio da div com as imagens */
+.imagens {
+    width: 80%;
+    height: 262px;
+    margin: auto;
+    margin-top: 8%;
+}
+.imagens ul{
+    padding-left: 4%;
+    height: 100%;
+    overflow: hidden;
+}
+.imagens ul li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+    overflow: hidden;
+}
+.imagens ul .img1 {
+    height: 250px;
+    width: 18%;
+    border: 3px solid green;
+    border-radius: 20px;
+
+}
+.imagens ul .img2 {
+    height: 250px;
+    width: 18%;
+    border: 3px solid blue;
+    border-radius: 20px;
+}
+.imagens ul .img3 {
+    height: 250px;
+    width: 18%;
+    border: 3px solid red;
+    border-radius: 20px;
+    
+}
+.imagens ul .img4 {
+    height: 250px;
+    width: 18%;
+    border: 3px solid yellow;
+    border-radius: 20px;
+    
+}
+.imagens ul .img5 {
+    height: 250px;
+    width: 18%;
+    border: 3px solid rgb(59, 47, 42);
+    border-radius: 20px; 
+    /* transition: 1.3s   */
+}
+
+.imagens ul li img{
+    height: 200px;
+    width: 200px;
+}
+.imagens .img5 .read{
+    height: 250px;
+    position: relative;
+    bottom: 117%;
+    padding-top: 35%; 
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+.imagens .img4 .read{
+    height: 250px;
+    position: relative;
+    bottom: 117%;
+    padding-top: 35%; 
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+.imagens .img3 .read{
+    height: 250px;
+    position: relative;
+    bottom: 117%;
+    padding-top: 35%; 
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+.imagens .img2 .read{
+    height: 250px;
+    position: relative;
+    bottom: 117%;
+    padding-top: 35%; 
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+.imagens .img1 .read{
+    height: 250px;
+    position: relative;
+    bottom: 117%;
+    padding-top: 35%; 
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+.imagens ul li:hover .read{
+    left: 0%;
+    transition: 1s;
+}
+/* final da div com as imagens */
+/* personalização dos input */
+.imagens ul .input1{
+    padding: 5px;
+    width: 77%;
+    border: 2px solid green;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+}
+.imagens ul .input2{
+    padding: 5px;
+    width: 77%;
+    border: 2px solid blue;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+}
+.imagens ul .input3{
+    padding: 5px;
+    width: 77%;
+    border: 2px solid red;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+}
+.imagens ul .input4{
+    padding: 5px;
+    width: 77%;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+}
+.imagens ul .input5{
+    padding: 5px;
+    width: 77%;
+    border: 2px solid rgb(59, 47, 42);
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+}
+.resultado .input6{
+    padding: 5px;
+    width: 150px;
+    border: 2px solid rgb(59, 47, 42);
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+}
+/* final dos input */
+/* inicio da div de resultados */
+.resultado{
+    border: 2px solid green;
+    border-radius: 10px; 
+    width: 60%;
+    margin: auto;
+    min-height: 110px;
+    text-align: center;
+}
+.resultado .texto {
+    padding: 1%;
+}
+.resultado .texto .botão{
+    padding: 0.8%;
+    color: white;
+    border: 2px solid green;
+    border-radius: 5px;
+    background: rgba(253, 248, 248, 0.445);
+    outline: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/* fim das div de resultados */

@@ -1,0 +1,251 @@
+/* tudo  */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+/* corpo  */
+body{
+    color:black;
+    font-family: sans-serif;
+}
+
+/* tag coloca direto, vh se ajusta a altura do navegador, deixar ser responsivo*/
+section{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+/* cabeçalho */
+header{
+    background-color:	#E6E6FA;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+  /* ele define que os elementos não fique encima da barra de menu */ 
+   z-index: 100;
+}
+
+.box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* define o espaço entre os itens*/
+}
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+nav{
+    margin: 30px 0;
+}
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    height: 50px;
+    color: black;
+}
+nav a:hover{
+    color: #7B68EE;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.imagemenu{
+height: 70px;
+float: left;
+
+}
+/* Aqui acaba o header */
+/* inicio do portfolio */
+.port{
+    background-image: url('../img/fundoPortfolio.png');
+    height: 100vh;
+    width: 100%;
+    background-size: 100%;
+}
+.portPai{
+    height: 100%;
+    width: 100%;
+
+}
+.texto{
+    height: 13%;
+    width: 29%;
+    text-align: center;
+    margin-left: 33%;
+    padding-top: 6%;
+}
+.texto h1{
+    padding: 7%;
+    color: white;
+    font-size: 367%;
+}
+.graf2{
+ height: 45%;
+ width: 53%;
+ float: left;
+ margin-top: 5%;
+}
+.graf1 {
+    height: 45%;
+    width: 45%;
+    float: right;
+    margin-top: 5%;
+}
+.graf1 .grafico1{
+ height: 100%;
+ transition: 1s;
+}
+.graf2 .grafico2{
+    height:100%;
+    float: right;
+    transition: 1s;
+}
+.graf2 .grafico2:hover, .graf1 .grafico1:hover {
+    transform: scale(1.3);
+}
+/* final do portfolio */
+.imgFundo{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-attachment: fixed; 
+}
+.imgText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgText div{
+    z-index: 1;
+    width: 50%;
+    max-width: 90%;
+    text-align: center;
+}
+.imgText div h1{
+
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    /* text-shadow: 3px 3px 2px #000; */
+}
+.imgText div p{
+    font-size: 22px;
+    color: #fff;
+    text-shadow: 3px 3px 2px #000;
+    /* sombra no texto */
+}
+/* CARD */
+.container-card {
+    display: flex;
+    align-items: center;
+    background: #e1e1e0
+
+}
+
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: #E6E6FA;
+    border-radius: 10px;
+    width: 20%;
+    height: 400px;
+    transition: all 0.5s;
+    overflow: hidden;
+
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card .read{
+    padding: 15px;
+    margin: 0 10px 10px 15px;
+}
+.read .vd{
+    color: #53ad27;
+    text-align: center;
+}
+.read .mt{
+    color: #d4a000;
+    text-align: center;
+}
+.read .og{
+    color: 655836;
+    text-align: center;
+}
+.read .pl{
+    color: #c01126;
+    text-align: center;
+}
+.read .pp{
+    color: #264cad;
+    text-align: center;
+}
+.read p{
+    text-align: justify;
+}
+
+/*rodapé*/
+footer{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  /* largura*/  width: 100%;
+    background-color: #E6E6FA;
+   /* altura*/ height: 80px;
+    text-align: center;
+}
+footer div{
+  /* para que ficasse embaixo*/   padding: 35px;
+}
+ /* @media transição de tamanho para que ele seja lido em outras plataformas*/
+@media (max-width: 700px){
+    .container-card{
+        flex-wrap: wrap;
+    }
+    .box-header{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .card{
+        margin: 30px 40px 10px 40px;
+        height: 380px;
+        
+    }
+    .container-card{
+        width: 100%;
+        height: auto;
+    }
+}
+#contato {
+    text-align: center;
+    background-color: #e1e1e0;
+}
+#contato a{
+    text-decoration: none;
+    color: #264cad
+}
+.contato{
+    padding-top: 80px;
+}

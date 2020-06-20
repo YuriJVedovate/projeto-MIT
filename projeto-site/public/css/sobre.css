@@ -1,0 +1,247 @@
+/* tudo  */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+/* corpo  */
+body{
+    color:black;
+    font-family: sans-serif;
+    background: rgba(238, 234, 234, 0.815)
+
+}
+
+/* cabeçalho */
+header{
+    background-color:	#E6E6FA;
+    width: 100%;
+    height: 80px;
+    /* position: fixed; */
+  /* ele define que os elementos não fique encima da barra de menu */ 
+   z-index: 100;
+}
+
+.box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* define o espaço entre os itens*/
+}
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+nav{
+    margin: 30px 0;
+}
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    height: 50px;
+    color: black;
+}
+nav a:hover{
+    color: #7B68EE;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.imagemenu{
+height: 70px;
+float: left;
+
+}
+/* header final */
+
+/* linha do tempo inicio */
+
+.linhaTempo{
+    position: relative;
+    margin: 50px auto;
+    padding: 12.61% 0px;
+    width: 80%;
+}
+.linhaTempo::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+}
+
+.linhaTempo ul li{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0px;
+    padding-top: 20px;
+}
+
+.content-li{
+    width: 100%;
+    height: 100px;
+    margin-left: 24px;
+}
+
+.linhaTempo .icones{
+    position: absolute;
+    background-color: red;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.icone1{
+    margin-left: 54px;
+    top: 20px;
+}
+.icone1::before{
+    top: 79px;
+    height: 51px;
+}
+.icone2{
+    margin-left: 104px;
+    top: 205px;
+}
+.icone2::before{
+    top: -60px;
+    height: 61px;
+}
+.icone3{
+    margin-left: 143px;
+    top: 20px;
+}
+.icone3::before{
+    top: 79px;
+    height: 51px;
+
+}
+.icone4{
+    margin-left: 55px;
+    top: 205px;
+}
+.icone4::before{
+    top: -60px;
+    height: 61px;
+}
+
+
+
+.linhaTempo .icones::before{
+    content: '';
+    position: absolute;
+    right: 36px;
+    width: 7px;
+    background-color: red;
+}
+
+.linhaTempo h1{
+
+}
+
+.linhaTempo h3{
+
+}
+
+.linhaTempo .text1, .linhaTempo .text3{
+
+}
+
+.linhaTempo .text2, .linhaTempo .text4{
+    position: relative;
+    top: -101px
+}
+
+.linhaTempo .text2{
+    margin-left: 34px;
+}
+.icones img{
+    height: 59px;
+    margin-top: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.linha-geral{
+    text-align: center; 
+}
+.linha-geral .container-sobre {
+    backdrop-filter: blur(4px);
+    background-color:	#E6E6FA;
+    margin: auto; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    width: 85%;
+}
+/* linha do tempo final */
+
+/* mvv inicio */
+.lista ul {
+    list-style: none;
+    display: flex;
+}
+
+.lista{
+    width: 100%;
+    height: 400px;
+}
+.lista .container {
+    width: 100%;
+    height: 300px;
+}
+.lista li{
+    width: 30%;
+    height: 300px;
+    margin-left: 25px;
+}
+.lista ul li div{
+    text-align: center;
+    backdrop-filter: blur(4px);
+    background-color:	#E6E6FA;
+    height: 100%;
+    padding: 6%;
+    border-radius: 30px; 
+}
+.lista ul li div p{
+    text-align: left;
+    margin-top: 20px;
+    
+}
+.vl p{
+    margin-left: 20% 
+}
+.lista ul li div img{
+    margin-top: 15px;
+}
+/* mvv final */
+

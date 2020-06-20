@@ -1,0 +1,80 @@
+projeto lixeira novo
+ funcionamento de projeto:
+ 1 passo: cliente se cadastra podendo nao ter lixeiras (0, n);
+ tabela cliente:
+ 	-insere cliente que vai ter os dados:
+ 		-IdCliente;
+ 		-Nome;
+ 		-CNPJ;
+ 	
+ 		
+ 		
+ 2 passo: cliente contrata lixeira:
+ labela lixeira:
+ 	-insere lixeira que vai ter os dados:
+ 		-IdLixeira;				(PK, INT)
+ 		-Dono; 		  			(fk)	
+ 		-idLocalização; 			(fk)
+ 		-Tipo;					(varchar)
+ 		-IdSensor de entrada; 			(pk)
+ 		-IdSensor 1; 				(pk)
+ 		-IdSensor 2; 				(pk)
+ 		-IdSensor 3; 				(pk)
+ 		
+tabela localização:
+	-insere endereço da lixeira que tem os dados:
+		-idLocalização;				(PK, INT)
+		-CEP;					(char)
+		-numero					(char)
+ 		
+ 		
+ 3 passo: monitoramento da lixeira:
+ 	-Toda vez que o sensor de entrada foi acionado, sensores de niveis são atualizados no banco,
+ 	só sera atualizado quando sensor de entrada for acionado, valor constante dele é 1, sensores restantes 
+ 	ocilam de 0 a 1;
+ 	
+ 	StatusSensor: FRACA 
+ 		-IdMonitoramento; 		(INT) cada lixeira comeca do 1;
+ 		-IdLxeira; 			(FK,INT)
+ 		-NivelLixeira;			(INT)
+ 		-data/hora			(DateTime)
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+LOGICA COM O NODE
+
+	**** a inserção de clientes e lixeiras nao serao feitos pelo node, uma vez que o mesmo so monitora o sensores;
+	sendo assim a logica para atualização de dados é a seguinte: ****
+	
+	1 PASSO: 
+		quando o sensor de entrada detectar entrada de sinal (nivel logico = 1), apos alguns segundos
+	o sistema analisa o nivel dos 3 sensores de niveis
+	logica:
+	
+	s1 = 0			s1 = 1			s1 = 1			s1 = 1
+	s2 = 0			s2 = 0			s2 = 1			s2 = 1
+	s3 = 0			s3 = 0			s3 = 0			s3 = 1
+	nivel = 0		nivel = 1		nivel = 2		nivel = 3
+	
+	qualquer coisa diferente dessas possibilidades significa que algum sensor esta errado
+	ex: 
+	s1 = 0 
+	s2 = 1
+	s3 = 1
+ 	neste caso nao é possivel os sensores 2 e 3 estarem acionados se o 1 nao estiver, logo que ele é o primeiro sinal,
+ 	entao provavelmente o sensor 1 esta danificado; 
+ 	
+ 	2 PASSO:
+ 		o node ira converter o sinal dos sensores e transformara em um nivel unico como a cima, apenas este nivel sera armazenado no banco
+ 	a tabela de status do sensor tem os seguintes dados:
+ 	 	-IdMonitoramento; 		(INT) cada lixeira comeca do 1 (nao pode ser auto_increment)
+ 		-IdLxeira; 			(FK,INT)
+ 		-NivelLixeira;			(INT)
+ 		-data/hora			(DateTime)	
+ 		
+ 	OBSERVAÇOES:
+ 		* IdMonitoramento da tabela status pode ser feito por um contador;
+ 		* IdLxeira sera tirada da tabela lixeira do banco;
+ 		* NivelLixeira sera o valor retirado da logica entre os 3 sensores de nivel;
+ 		
+ 	conversar com a marize se podemos ao invez de usar uma api que randomiza os dados, criarmos contadores para simular a lotação da lixeira
+ 	

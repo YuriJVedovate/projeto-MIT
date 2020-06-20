@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+    /* inicio do dash */
+
+    .Dash{
+        padding-top: 70px;
+        /* display: flex */
+    }
+    .Dash .grafico1 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: 0 0 1px black;
+        /* background-color: rgba(180, 182, 70, 0.568) */
+    } 
+    .Dash .grafico2 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: 0 0 1px black;
+        /* background-color: rgba(105, 114, 231, 0.301) */
+    } 
+    .Dash .grafico3 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: 0 0 1px black;
+        /* background-color: rgba(238, 162, 162, 0.568) */
+    } 
+    .Dash .grafico4 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: 0 0 1px black;
+        /* background-color: rgba(150, 233, 111, 0.301) */
+    } 
+    .Dash .grafico5 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: 0 0 1px black;
+        /* background-color: rgba(255, 238, 238, 0.808) */
+    } 
+
+
+
+    
+        /* final do dash */

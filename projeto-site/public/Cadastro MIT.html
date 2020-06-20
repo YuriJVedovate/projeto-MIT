@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro MIT</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+
+</head>
+<body > 
+    <header>  
+         <!-- Ferramenta de inclusão-->
+         <script type="text/javascript">
+            var _userway_config = {
+                account: 'IXIpS4aC3h'
+            };
+            </script>
+            <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>  
+    </header>
+            
+   <form class="box" action="Cadastro.html" id="formulario">
+
+    <h1>  Cadastro </h1>
+    <input size="10" id="nome" type="text" required name=""  placeholder="Nome da empresa"   >
+    <input size="10" id="cnpj" type="number" required name=""  placeholder="CNPJ da empresa"   >
+    <input size="10" id="email" type="email" required name=""  placeholder=" E-mail da empresa"   >
+    <input size="10" id="estado" type="password" required name=""  placeholder="Senha">
+ 
+       <button onclick="cadastrar()" type="submit"  name=""  value="Login">Cadastre</button> 
+       
+          </form>   
+</body>
+</html>
+<script>
+
+function cadastrar(){
+    if (nome.value != '' && cnpj.value != '' && email.value != '' && estado.value != '' ){
+        formulario.innerHTML = `<div class = "formCompleto"><span class="texto">Bem vindo a <span class = "mit">MIT</span>!</span><br><br>
+            <p><a href="login.html">Conecte-se agora</a></p></div>
+        <div class="logo"><img src="img/MIT.png" alt=""></div>`
+    }
+}
+   
+</script>

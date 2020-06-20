@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/Simulador.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--header-->
+    <header>
+       <!-- Ferramenta de inclusão-->
+       <script type="text/javascript">
+        var _userway_config = {
+        account: 'IXIpS4aC3h'
+        };
+        </script>
+        <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
+        
+      <!--cabeçalho de caixa de recipiente-->
+      <div class="container box-header">
+          <div class="titulo1">
+              <img class="imagemenu" src="img/MIT.png" alt="">
+          </div>
+
+          <!-- a tag nav ele agrupa elementos de links para outras paginas -->
+          <nav class="nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+              <li><a href="sobre.html">SOBRE</a></li>
+              <li><a href="Simulador.html">PRODUTO</a></li>
+              <!-- <li><a href=".Simulador MIT/Simulador.html">SIMULADOR</a></li> -->
+              <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+              <li><a href="login.html">LOGIN</a></li>
+              <li><a href="index.html#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+      </div>
+   </header>
+    <!--final do header-->
+    
+    <div class="pai">
+        <!-- inicio do titulo -->
+        <!-- <div class="titulo">
+            <div class="logo"></div>
+            <h2>
+                Simulador MIT
+            </h2>
+        </div><br> -->
+        <!-- final do titulo -->
+        <!-- inicio das  -->
+        <div class="imagens">
+            <ul>
+              <!-- primeiro item da lista -->
+                <li class="img1">
+                    <img src="img/vidro1.jpeg" alt="imagem da lixeira de vidro"><br><input class="input1" type="text" id="lixeira1" placeholder="Informe Quantas">
+                      <div class="read">
+                          <h2 class="vd">Vidro</h2>
+                          <p>O que jogar na lixeira: garrafas, potes de conservas, frascos em geral, copos e vidros de janelas. 
+                              Importante: inteiros ou em cacos, os produtos devem ser enrolados em jornal.</p>
+                      </div>
+                </li>
+                <!-- segundo item da lista -->
+                <li class="img2">
+                  <img src="img/papel1.jpeg" alt="imagem da lixeira de vidro"><br><input class="input2" type="text" id="lixeira2" placeholder="Informe Quantas">
+                  <div class="read">
+                      <h2 class="pp">Papel</h2>
+                      <p>O que jogar na lixeira: jornais, revistas, envelopes, cadernos, impressos,
+                           rascunhos, papel de fax, fotocópias, listas telefônicas, cartazes, aparas de papel,
+                            caixas de papelão.</p>
+                  </div>
+                </li>
+                <!-- terceiro item da lista -->
+                <li class="img3">
+                  <img src="img/plastico1.png" alt="imagem da lixeira de vidro"><br><input class="input3" type="text" id="lixeira3" placeholder="Informe Quantas">
+                  <div class="read">
+                      <h2 class="pl">Plástico</h2>
+                      <p>potes, embalagens, copos, garrafas, frascos de produtos de limpeza e higiene pessoal, 
+                          sacos e sacolas, utensílios plásticos usados (baldes, canetas etc.),.</p>
+                  </div>
+                </li>
+                <!-- item quatro da lista -->
+                <li class="img4">
+                  <img src="img/metal1.jpeg" alt="imagem da lixeira de vidro"><br><input class="input4" type="text" id="lixeira4" placeholder="Informe Quantas">
+                  <div class="read">
+                    <h2 class="mt">Metal</h2>
+                    <p>O que jogar na lixeira: tampinhas de garrafa, latinhas e enlatados,
+                         tampas de panelas e panelas sem cabo, pregos (embalados), embalagens descartáveis, 
+                         papel alumínio (limpo);</p>
+                </div>
+                </li>
+                <li class="img5">
+                  <img src="img/organico1.jpeg" alt="imagem da lixeira de vidro"><br><input class="input5" type="text" id="lixeira5" placeholder="Informe Quantas">
+                  <div class="read">
+                      <h2 class="og">Orgânico</h2>
+                      <p>O que jogar na lixeira: Restos de alimentos orgânicos (carnes, vegetais, frutos, cascas de ovos),
+                           papel, madeira, ossos.</p>
+                  </div>
+                </li>
+            </ul>
+        </div><br>
+        <div class="resultado">
+                <div class="texto"> 
+                    <h4>Por quantos meses deseja alugar o nosso produto? <input type="text" class="input6" id="tempo" placeholder="meses">
+                    <br>Alugue por 12 meses ou mais e tenha um <b>Desconto!</b></h4>
+                    
+                    <button class="botão" onclick="pronto()">Tudo Pronto?</button> 
+                  
+                    <h4>
+                    <div id="mit"></div>
+                    <div id="total1"></div>
+                    <div id="mit2"></div>
+                    </h4>
+                </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+<script>
+        function pronto(){ 
+        mit.innerHTML = '';
+        mit2.innerHTML = '';
+        total1.innerHTML = '';
+        var tempo1 = Number(tempo.value)
+        
+        if (tempo1 < 12) {
+          var calculo = tempo1 *50
+          var total;
+          var lixeira01 = Number(lixeira1.value)
+          var lixeira02 = Number(lixeira2.value)
+          var lixeira03 = Number(lixeira3.value)
+          var lixeira04 = Number(lixeira4.value)
+          var lixeira05 = Number(lixeira5.value)
+        if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0&& lixeira05 == 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira01)* calculo 
+                }
+        
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0&& lixeira05 == 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04)* calculo 
+                }
+        
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0&& lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                }
+        
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0&& lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira05)* calculo 
+                }
+        
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0&& lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira04)* calculo 
+               }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03)* calculo 
+                }
+             
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0&& lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira04 + lixeira05)* calculo 
+                }
+             
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0&& lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03)* calculo 
+                }
+        
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0&& lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira05)* calculo 
+                }
+              
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0&& lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0&& lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0&& lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){        
+                  total1.innerHTML = '';
+                  var total = (lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira05 + lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+               }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira04)* calculo 
+                }
+                
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira01)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                }
+     
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira02 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira05)* calculo 
+                }
+        
+        total1.innerHTML = `O Valor total de sua compra é R$${total.toFixed(2)}<br>
+        Compre por 12 meses ou mais e tenha um Desconto especial!` 
+        }
+        if (tempo1 >= 12) {
+          mit.innerHTML = `Gostaria que a manutenção fosse feita pela MIT? <br><br>
+          <button class="button_sim" onclick="sim()">Sim</button> <button class="button_nao" onclick="não()">Não</button>`
+        }
+        }
+        function sim(){
+          mit.innerHTML = '';
+          mit2.innerHTML = '';  
+          var tempo1 = Number(tempo.value)
+          var calculo = tempo1 *50
+          var total;
+          var lixeira01 = Number(lixeira1.value)
+          var lixeira02 = Number(lixeira2.value)
+          var lixeira03 = Number(lixeira3.value)
+          var lixeira04 = Number(lixeira4.value)
+          var lixeira05 = Number(lixeira5.value)
+          
+          
+          mit2.innerHTML += `Valor mensal da manutenção = R$50.00`
+        if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+         else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+         else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+            
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira05 + lixeira03 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+    
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+    
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira03)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+        
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira04)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira01)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira02 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira04 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira05)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira05 + lixeira01)* calculo 
+                total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+
+        var soma = total*0.9;
+        
+        mit2.innerHTML += `<br> Obrigado por confiar na MIT! <br>
+        <u class = "tag_u">O Total de sua compra é R$${soma.toFixed(2)} com 10% de desconto.</u>`
+        }
+        function não(){
+          mit2.innerHTML = '';
+          mit.innerHTML = '';
+          var tempo1 = Number(tempo.value)
+          var calculo = tempo1 *50
+          var total;
+          var lixeira01 = Number(lixeira1.value)
+          var lixeira02 = Number(lixeira2.value)
+          var lixeira03 = Number(lixeira3.value)
+          var lixeira04 = Number(lixeira4.value)
+          var lixeira05 = Number(lixeira5.value)
+        if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01)* calculo 
+                }
+ 
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira04)* calculo 
+               }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira04 + lixeira05)* calculo 
+                }
+        
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira05 + lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira03)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+               }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 == 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 > 0){ 
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 > 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira04)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira02 + lixeira03)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 == 0 && lixeira04 == 0 && lixeira05 == 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira01)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 ==0 && lixeira03 > 0 && lixeira04 > 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira04 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 > 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira01 + lixeira03 + lixeira02 + lixeira05)* calculo 
+                }
+
+        else if (lixeira01 == 0 && lixeira02 > 0 && lixeira03 > 0 && lixeira04 == 0 && lixeira05 > 0){
+                  total1.innerHTML = '';
+                  var total = (lixeira02 + lixeira03 + lixeira05)* calculo 
+                }
+        
+        
+        total1.innerHTML = `O Valor total de sua compra é R$${total.toFixed(2)}`
+        }
+        </script>
+        <script type="text/javascript">
+          // <![CDATA[
+          var ttChatLoaderS = document.createElement('script');
+          document.tomticketChatLoaderScriptVersion = 2;
+          ttChatLoaderS.src = 'https://mit.tomticket.com/scripts-chat/chat.min.js'
+          + '?id=EP47161'
+          + '&account=3018304P19062020091631'
+          + '&autoOpen=0'
+          + '&hideWhenOffline=0'
+          + '&d=mit'
+          + '&ts=' + new Date().getTime()
+          + '&ref=' + encodeURIComponent(document.URL);
+          document.body.appendChild(ttChatLoaderS);
+          //]]>
+          </script>

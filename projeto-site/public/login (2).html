@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="css/style-login.css">
+
+  </head>
+  <body>
+     <!-- Ferramenta de inclusão-->
+     <script type="text/javascript">
+      var _userway_config = {
+      account: 'IXIpS4aC3h'
+      };
+      </script>
+      <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
+      
+      <!-- final da ferramenta -->
+
+      <div class="card">
+      <form class="box" action="dashbord.html">
+  <h1> LOGIN </h1>
+  <input type="email" id="nome" required  placeholder="Username" > 
+  <input type="password" id="senha" required  placeholder="password">
+
+  <button onclick="login()" type="submit"value="Login">Login</button> 
+  <h3> <a href="Cadastro MIT.html"> Cadastre-se</a></h3> 
+      </form>   
+
+</div>
+  </body>
+  </html> 
+  <script>
+function login(){
+  if (nome.value == 'MIT@bandtec.com.br' && senha.value == 'MIT'){
+    window.location.href="dashboard.html"} 
+  // } else if (nome.value == '' && senha.value == ''){
+  //   alert('Preencha os campos corretamente')
+  // } else 
+}
+
+  </script>
